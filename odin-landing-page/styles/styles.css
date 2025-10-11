@@ -10,6 +10,10 @@
     --quote-text: 36px #1f2937 weight: 300;
 }
 
+body {
+    margin: 0;
+}
+
 * {
     font-family: var(--font);
 }
