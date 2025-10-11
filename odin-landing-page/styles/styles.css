@@ -1,36 +1,19 @@
-:root {
-    --font: 'Roboto', sans-serif;
-    --header-background-color: #1f2937;
-    --main-text: 48px #f9faf8 weight: 900;
-    --secondary-text: 18px #e5e7eb;
-    --logo-text: 24px #f9faf8;
-    --button-color: #3882f6;
-    --info-header: 36px #1f2937 weight: 900;
-    --quote-background: #e5e7eb;
-    --quote-text: 36px #1f2937 weight: 300;
+* {
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
-}
-
-* {
-    font-family: var(--font);
+    font-family: 'Roboto', sans-serif;
+    display: block;
 }
 
 #hero {
-    background-color: #1f2937;
     display: flex;
-}
-
-#hero header {
-    display: block;
-}
-
-#hero .main-text {
-    display: block;
-    margin-left: 200px;
-    margin-right: 200px;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    background-color: #1f2937;
 }
 
 #hero .main-text h1 {
@@ -45,7 +28,7 @@ body {
 }
 
 #hero button {
-    background-color: var(--button-color);
+    background-color: #3882f6;
     color: #f9faf8;
     border: none;
     padding: 10px 20px;
@@ -56,18 +39,26 @@ body {
 
 #hero img {
     width: 50%;
-    height: auto;
+    height: 50%;
 }
 
 #hero h1 {
-    font-size: 36px #1f2937 weight: 900;
+    font-size: 36px;
+    font-weight: 900;
     color: #f9faf8;
 }
 
+#info {
+    background: white;
+    height: 50vh;
+}
+
 #quote {
-    background: var(--quote-background)
+    background: #e5e7eb;
+    height: 50vh;
 }
 
 #call-to-action {
-    background: var(--button-color);
+    background: #3882f6;
+    height: 30vh;
 }
