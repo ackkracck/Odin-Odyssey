@@ -1,0 +1,69 @@
+:root {
+    --font: 'Roboto', sans-serif;
+    --header-background-color: #1f2937;
+    --main-text: 48px #f9faf8 weight: 900;
+    --secondary-text: 18px #e5e7eb;
+    --logo-text: 24px #f9faf8;
+    --button-color: #3882f6;
+    --info-header: 36px #1f2937 weight: 900;
+    --quote-background: #e5e7eb;
+    --quote-text: 36px #1f2937 weight: 300;
+}
+
+* {
+    font-family: var(--font);
+}
+
+#hero {
+    background-color: #1f2937;
+    display: flex;
+}
+
+#hero header {
+    display: block;
+}
+
+#hero .main-text {
+    display: block;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+#hero .main-text h1 {
+    font-size: 48px;
+    color: #f9faf8;
+    font-weight: 900;
+}
+
+#hero p {
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+#hero button {
+    background-color: var(--button-color);
+    color: #f9faf8;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#hero img {
+    width: 50%;
+    height: auto;
+}
+
+#hero h1 {
+    font-size: 36px #1f2937 weight: 900;
+    color: #f9faf8;
+}
+
+#quote {
+    background: var(--quote-background)
+}
+
+#call-to-action {
+    background: var(--button-color);
+}
