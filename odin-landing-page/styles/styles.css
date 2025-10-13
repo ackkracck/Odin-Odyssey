@@ -8,7 +8,9 @@ body {
     display: block;
 }
 
-h1, p {
+h1,
+h2,
+p {
     margin: 0;
     padding: 0;
 }
@@ -117,41 +119,71 @@ header nav ul li a {
 }
 
 .projects {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-.projects > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 180px;
+.projects>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
 }
 
-.projects > div .box {
-  width: 100%;
-  height: 180px;
-  border: 5px solid #4e91ee;
-  border-radius: 20px;
+.projects>div .box {
+    width: 100%;
+    height: 180px;
+    border: 5px solid #4e91ee;
+    border-radius: 20px;
 }
 
-.projects > div p {
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
-  font-size: 18px;
-  color: #1f2937;
+.projects>div p {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #1f2937;
 }
 
 #quote {
     background: #e5e7eb;
-    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 36px;
+    color: #1f2937;
+    font-weight: 300;
+    padding: 75px;
+}
+
+#quote em {
+    width: 60%;
+    text-align: left;
+    font-style: italic;
+    margin-top: 40px;
+}
+
+.quote-author {
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 450px;
+    padding-top: 0px;
+    padding-bottom: 40px;
 }
 
 #call-to-action {
-    background: #3882f6;
     height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#call-to-action > div {
+    background: #3882f6;
+    width: 300px;
 }
