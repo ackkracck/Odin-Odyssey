@@ -7,9 +7,9 @@ A collection of my progress following The Odin Project curriculum.
 ## 🧱 Foundations
 
 ### 📖 Learning
-- [Odin Links & Images](./odin-links-and-images)
-- [Odin Recipes](./odin-recipes)
-- [Interneting Is Hard – Flexbox Project](./other-projects/interneting-is-hard/flexbox/flexbox.html)
+- [Odin Links & Images](./Foundations/HTML-CSS/odin-links-and-images)
+- [Odin Recipes](./Foundations/HTML-CSS/odin-recipes)
+- [Interneting Is Hard – Flexbox Project](./Foundations/HTML-CSS/other-projects/interneting-is-hard/flexbox/flexbox.html)
 
 **Things I have learnt:**
 - Complete refresher on HTML and CSS fundamentals  
@@ -17,7 +17,7 @@ A collection of my progress following The Odin Project curriculum.
 - So excited to start JS!
 
 ### 🧩 Project 1 – Odin Landing Page
-- [Odin Project #1 – Landing Page](./odin-landing-page)
+- [Odin Project #1 – Landing Page](./Foundations/HTML-CSS/odin-landing-page)
 
 ---
 
