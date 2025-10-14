@@ -1,4 +1,4 @@
-# The Odin Project Portfolio
+# My 'The Odin Project' Portfolio
 
 A collection of my progress following The Odin Project curriculum.
 
