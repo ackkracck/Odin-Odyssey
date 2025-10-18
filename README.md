@@ -21,9 +21,13 @@ A collection of my progress following The Odin Project curriculum.
 
 ---
 
-## 🚀 Next Section (placeholder)
+## 🙌 JavaScript 
+Oh boy, what to say about this section, it was kind of tiresome to go through the js exercises, and I was putting off working on it, but in the end I decided to just complete it to stay on track for this section of the Foundations course.
 
-_This will be the next major section — e.g., JavaScript, Intermediate HTML/CSS, or Full Stack._  
-_I’ll add projects here once I move on from Foundations._
+It honestly paid off, I'm really glad I went through it, I was already decently proficient in JS but it made me comfortable with the language to a moderate level.
+
+### 📖 Foundations JavaScript Coursework
+- [My fork of 'javascript-exercises'](https://www.github.com/ackkracck/javascript-exercises)
+- [Odin Project #2 - Rock, Paper, Scissors](./Foundations/Odin-Projects/rock-paper-scissors/)
 
 ---
