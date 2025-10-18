@@ -21,7 +21,7 @@ A collection of my progress following The Odin Project curriculum.
 
 ---
 
-## 🙌 JavaScript 
+### 🙌 JavaScript 
 Oh boy, what to say about this section, it was kind of tiresome to go through the js exercises, and I was putting off working on it, but in the end I decided to just complete it to stay on track for this section of the Foundations course.
 
 It honestly paid off, I'm really glad I went through it, I was already decently proficient in JS but it made me comfortable with the language to a moderate level.
