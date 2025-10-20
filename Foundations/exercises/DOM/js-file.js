@@ -8,6 +8,7 @@ firstp.style.color = 'red';
 const h3 = document.createElement('h3');
 h3.textContent = 'I\'m a blue h3!';
 h3.style.color = 'blue';
+h3.style.fontFamily = 'Georgia, serif';
 
 const div = document.createElement('div');
 const h1 = document.createElement('h1');
@@ -23,6 +24,26 @@ div.style.backgroundColor = 'pink';
 container.appendChild(firstp);
 container.appendChild(h3);
 container.appendChild(div);
+
+function myFunction() {
+    alert('Hello World! PooPooPeePeeHehe');
+}
+
+// STEP 2 OF THE EXERCISE - EVENTS
+const btn2 = document.querySelector('#btn2');
+btn2.onclick = (event) => alert(event.button);
+
+/*const btn3 = document.querySelector('#btn3');
+btn3.addEventListener('click', () => alert('Hello World!'));*/
+
+btn3.addEventListener("click", (event) => {
+  event.target.style.backgroundColor =
+    event.target.style.backgroundColor === "blue" ? "" : "blue";
+});
+
+const body = document.querySelector('body');
+
+body.addEventListener('mousemove', () => console.log('Mouse moved!'));
 
 /*
 // created the working div 
