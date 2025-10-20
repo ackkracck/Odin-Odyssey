@@ -40,3 +40,14 @@ So that's where I am right now - trying to open up my brain to ingrain what's po
 - [Odin Project #2 - Rock, Paper, Scissors](./Foundations/Odin-Projects/rock-paper-scissors/)
 
 ---
+
+## 🍴 Forks – Odin Odyssey Course
+
+This section is a collection of all the repositories I’ve forked while completing **The Odin Project – Odin Odyssey** curriculum.  
+Each fork represents my personal progress (and sometimes twists) on the forks recommended by The Odin Project.
+
+<div class="forks-container">
+  <a class="fork-card" href="https://github.com/ackkracck/javascript-exercises" target="_blank">
+    <h3>✅ JavaScript Exercises</h3>
+    <p>Practice problems to build JS fundamentals</p>
+  </a>
