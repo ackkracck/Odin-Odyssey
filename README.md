@@ -28,7 +28,7 @@ Oh boy, what to say about this section, it was kind of tiresome to go through th
 
 It honestly paid off, I'm really glad I went through it, I was already decently proficient in JS but it made me comfortable with the language to a moderate level.
 
-#### 20th of October 2025 
+#### - 20th of October 2025 
 I've completed up to the DOM manipulation section of the foundations course, and will attempt to next tackle the next rock-paper-scissors project. I have to admit that I haven't been keeping track of every single resource too deeply (nor the additional resources), but there is logic behind this.
 
 If I focus too much on these resources right now, I will be overloaded with information more than my brain can retain - instead I am focusing on understand the possibilities available to me within this language, and can just reference resources later to implement them when needed.
@@ -36,18 +36,15 @@ If I focus too much on these resources right now, I will be overloaded with info
 So that's where I am right now - trying to open up my brain to ingrain what's possible. I will have plenty of time later to practice different aspects of JS programming when the need for them arise within projects I am eager to build.
 
 ### 📖 Foundations JavaScript Coursework
-- [My fork of 'javascript-exercises'](https://www.github.com/ackkracck/javascript-exercises)
 - [Odin Project #2 - Rock, Paper, Scissors](./Foundations/Odin-Projects/rock-paper-scissors/)
 
 ---
 
 ## 🍴 Forks – Odin Odyssey Course
 
-This section is a collection of all the repositories I’ve forked while completing **The Odin Project – Odin Odyssey** curriculum.  
+This section is a collection of all the repositories I’ve forked while completing **The Odin Project – Odin Odyssey** curriculum.
+
 Each fork represents my personal progress (and sometimes twists) on the forks recommended by The Odin Project.
 
-<div class="forks-container">
-  <a class="fork-card" href="https://github.com/ackkracck/javascript-exercises" target="_blank">
-    <h3>✅ JavaScript Exercises</h3>
-    <p>Practice problems to build JS fundamentals</p>
-  </a>
+
+- [javascript-exercises](https://www.github.com/ackkracck/javascript-exercises)
