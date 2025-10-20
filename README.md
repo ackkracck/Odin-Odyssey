@@ -29,7 +29,7 @@ Oh boy, what to say about this section, it was kind of tiresome to go through th
 It honestly paid off, I'm really glad I went through it, I was already decently proficient in JS but it made me comfortable with the language to a moderate level.
 
 #### 20th of October 2025 
-- I've completed up to the DOM manipulation section of the foundations course, and will attempt to next tackle the next rock-paper-scissors project. I have to admit that I haven't been keeping track of every single resource too deeply (nor the additional resources), but there is logic behind this.
+I've completed up to the DOM manipulation section of the foundations course, and will attempt to next tackle the next rock-paper-scissors project. I have to admit that I haven't been keeping track of every single resource too deeply (nor the additional resources), but there is logic behind this.
 
 If I focus too much on these resources right now, I will be overloaded with information more than my brain can retain - instead I am focusing on understand the possibilities available to me within this language, and can just reference resources later to implement them when needed.
 
