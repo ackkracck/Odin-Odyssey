@@ -1,4 +1,5 @@
 .DS_Store
+Forks/
 Forks/*/.git
 Forks/*/.gitmodules
 Forks/*/.github
