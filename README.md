@@ -4,6 +4,8 @@
 
 A collection of my progress following The Odin Project curriculum.
 
+[Personal Portfolio](https://ackkracck.github.io/Portfolio/)
+
 ---
 
 ## 🧱 Foundations
