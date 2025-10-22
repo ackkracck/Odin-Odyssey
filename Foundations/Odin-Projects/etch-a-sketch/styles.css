@@ -1,3 +1,23 @@
 * {
     box-sizing: border-box;
 }
+
+#sketch {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.pixel {
+    width: 25px;
+    height: 25px;
+    border: 1px solid lightgrey;
+}
+
+.pixel:hover {
+    background-color: rgb(237, 237, 237);
+}
