@@ -37,8 +37,22 @@ If I focus too much on these resources right now, I will be overloaded with info
 
 So that's where I am right now - trying to open up my brain to ingrain what's possible. I will have plenty of time later to practice different aspects of JS programming when the need for them arise within projects I am eager to build.
 
+#### - 22th (actually now 12:20AM on the 23rd) of October 2025
+I've completed the Etch-A-Sketch project! W00t!
+
+Honestly it is still just a chrome app as suggested by my commit message, but I've had some tremendous amount of practice and I actually understand how to program on the front end pretty decently now, and also have a fair amount of practice with branching and merging!
+
+Hope I'm not about to fall into the valley of despair...
+
+Nonetheless, I'm proud of what i've created, and truly excited to click completed on this project and display it on the odin project website. I will definitely come back and fix this project up when i'm putting together my portfolio.
+
+So happy to say that I currently feel pretty comfortable. What I really need to work on right now is the intial planning process where I lay out the actual design of all my projects before I start creating anything, this will give me a well defined structure to follow and implement.
+
+Wish me luck!
+
 ### 📖 Foundations JavaScript Coursework
 - [Odin Project #2 - Rock, Paper, Scissors](./Foundations/Odin-Projects/rock-paper-scissors/)
+- [Odin Project #3 - Etch-A-Sketch](./Foundations/Odin-Projects/etch-a-sketch/)
 
 ---
 
