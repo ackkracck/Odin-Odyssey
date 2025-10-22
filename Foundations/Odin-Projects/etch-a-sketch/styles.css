@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    background-color: bisque;
 }
 
 #container {
@@ -21,8 +22,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
-    margin-top: 5px;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#tools button {
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#tools button:hover {
+    transform: translateY(-2px);
+    box-shadow: 3px 3px grey;
 }
 
 .row {
@@ -40,10 +51,22 @@
     background-color: rgb(237, 237, 237);
 }
 
-#current-color {
+#colors * {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 3px solid white;
+    background-color: black;
+}
+
+#colors button {
+    background-color: black;
+}
+
+#colors *:hover {
+    transform: translateY(-1px);
+}
+
+.color-picker {
     background-color: black;
 }
