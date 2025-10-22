@@ -2,9 +2,27 @@
     box-sizing: border-box;
 }
 
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+
 #sketch {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#tools {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
 }
 
 .row {
@@ -20,4 +38,12 @@
 
 .pixel:hover {
     background-color: rgb(237, 237, 237);
+}
+
+#current-color {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: black;
 }
