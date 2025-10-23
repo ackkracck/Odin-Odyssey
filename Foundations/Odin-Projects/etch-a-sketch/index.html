@@ -7,18 +7,23 @@
     <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="styles.css">
     <script src="javascript.js" defer></script>
-</head>
+    <!-- Import bytesized font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bytesized&family=Tiny5&display=swap" rel="stylesheet">
 
 <body>
     <div id="container">
+        <h1>etch-a-sketch</h1>
         <div id="sketch"></div>
         <div id="tools">
+            <button id="grid8">8x8</button>
             <button id="grid16">16x16</button>
-            <button id="grid32">32x32</button>
+            <input type="text" id="custom-size" placeholder="custom size">
             <div id="colors-menu">
-                <button id="first-color" style="background-color: black"></button>
-                <button id="second-color" style="background-color: black"></button>
-                <button id="third-color" style="background-color: black"></button>
+                <input type="color" class="color-picker" value="#ff0000">
+                <input type="color" class="color-picker" value="#00ff00">
+                <input type="color" class="color-picker" value="#0000ff">
             </div>
             <button id="eraser">Eraser</button>
             <button id="clear-button">Clear</button>

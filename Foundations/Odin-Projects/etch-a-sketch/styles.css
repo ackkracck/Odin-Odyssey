@@ -8,14 +8,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 1%;
+    font-family: "Tiny5", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#container h1 {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 #sketch {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    border: 3px solid black;
+    touch-action: none;
+    height: 500px;
+    width: 500px;
 }
 
 #tools {
@@ -29,6 +39,10 @@
 #tools button {
     padding: 10px;
     border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 3px solid black;
+    background-color: #ffffff;
 }
 
 #tools button:hover {
@@ -36,37 +50,60 @@
     box-shadow: 3px 3px grey;
 }
 
+#custom-size {
+    field-sizing: content;
+    padding: 10px;
+    border: 3px solid grey;
+    border-radius: 15px;
+    font-weight: bold;
+    background-color: #ffffff;
+}
+
+#custom-size:hover {
+    transform: translateY(-2px);
+    box-shadow: 3px 3px grey;
+}
+
 .row {
     display: flex;
+    flex: 1;
     flex-direction: row;
 }
 
 .pixel {
-    width: 25px;
-    height: 25px;
+    flex: 1;
     border: 1px solid lightgrey;
 }
 
-.pixel:hover {
-    background-color: rgb(237, 237, 237);
-}
-
-#colors * {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    border: 3px solid white;
-    background-color: black;
-}
-
-#colors button {
-    background-color: black;
-}
-
-#colors *:hover {
-    transform: translateY(-1px);
+#colors-menu {
+    display: flex;
+    gap: 10px;
 }
 
 .color-picker {
-    background-color: black;
+    width: 25px;
+    height: 25px;
+    border: 3px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color-picker:hover {
+    transform: translateY(-2px);
+    box-shadow: 3px 3px grey;
+}
+
+.color-picker::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border-radius: 50%;
+    display: none;
+}
+
+#color-picker::-webkit-color-swatch {
+    border-radius: 50%;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
 }
