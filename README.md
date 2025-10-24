@@ -62,11 +62,12 @@ Even before I started I wanted to see all the created projects, so i looked up o
 I am so proud of what i've created and truly belive it to be the best of all competitors in this course.
 
 starting now...
-
 - [Odin Project #4 - Calculator](./Foundations/Odin-Projects/calculator/)
-> "...those who are unaffected by these changes, who are the same in pleasure and pain; are truly wise and fit for immortality."
->
-> - Krishna
+
+---
+
+> ✨ **“Those who are unaffected by these changes, who are the same in pleasure and pain, are truly wise and fit for immortality.”**  
+> — *Krishna* *(Bhagavad Gita)*
 
 ---
 
