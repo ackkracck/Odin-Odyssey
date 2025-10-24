@@ -54,14 +54,12 @@ Wish me luck!
 - [Odin Project #2 - Rock, Paper, Scissors](./Foundations/Odin-Projects/rock-paper-scissors/)
 - [Odin Project #3 - Etch-A-Sketch](./Foundations/Odin-Projects/etch-a-sketch/)
 
-#### 25th October 2025 - Odin Project #3
+#### - 25th October 2025 - Odin Project #3
 What to say again, this project was told me not to be easy by the odin project, but the minimum viable project truly was easy.
 
 Even before I started I wanted to see all the created projects, so i looked up other community projects and watched youtube videos such as those by @trshpuppy.
 
 I am so proud of what i've created and truly belive it to be the best of all competitors in this course.
-
-- [Odin Project #3 - Etch-A-Sketch](./Foundations/Odin-Projects/etch-a-sketch/)
 
 starting now...
 
