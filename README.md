@@ -63,6 +63,12 @@ I am so proud of what i've created and truly belive it to be the best of all com
 
 - [Odin Project #3 - Etch-A-Sketch](./Foundations/Odin-Projects/etch-a-sketch/)
 
+starting now...
+
+- [Odin Project #4 - Calculator](./Foundations/Odin-Projects/calculator/)
+'...those who are unaffected by these changes, who are the same in pleasure and pain; are truly wise and fit for immortality'
+- Krishna
+
 ---
 
 ## 🍴 Forks – Odin Odyssey Course
