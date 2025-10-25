@@ -6,38 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="calculator.js" defer></script>
 </head>
 
 <body>
     <div id="calculator">
         <div id="screen"></div>
-        <div id="buttons">
-            <div id="memory-buttons"></div>
-            <div id="keypad">
-                <div class="row">
-                    <button id="digit-7" class="digit" value="7">7</button>
-                    <button id="digit-8" class="digit" value="8">8</button>
-                    <button id="digit-9" class="digit" value="9">9</button>
-                    <button id="divide" class="operator">÷</button>
-                </div>
-                <div class="row">
-                    <button id="digit-4" class="digit" value="4">4</button>
-                    <button id="digit-5" class="digit" value="5">5</button>
-                    <button id="digit-6" class="digit" value="6">6</button>
-                    <button id="multiply" class="operator">x</button>
-                </div>
-                <div class="row">
-                    <button id="digit-1" class="digit" value="1">1</button>
-                    <button id="digit-2" class="digit" value="2">2</button>
-                    <button id="digit-3" class="digit" value="3">3</button>
-                    <button id="subtract" class="operator">-</button>
-                </div>
-                <div class="row">
-                    <button id="digit-0" class="digit" value="0">0</button>
-                    <button id="period" class="operator">.</button>
-                    <button id="equals" class="operator">=</button>
-                    <button id="add" class="operator">+</button>
-                </div>
+        <div id="clear-delete">
+            <button id="clear">AC</button>
+            <button id="delete">←</button>
+        </div>
+        <div id="keypad">
+            <!--Keys-->
+            <div class="row">
+                <button id="digit-7" class="digit" value="7">7</button>
+                <button id="digit-8" class="digit" value="8">8</button>
+                <button id="digit-9" class="digit" value="9">9</button>
+                <button id="divide" class="operator">/</button>
+            </div>
+            <div class="row">
+                <button id="digit-4" class="digit" value="4">4</button>
+                <button id="digit-5" class="digit" value="5">5</button>
+                <button id="digit-6" class="digit" value="6">6</button>
+                <button id="multiply" class="operator">x</button>
+            </div>
+            <div class="row">
+                <button id="digit-1" class="digit" value="1">1</button>
+                <button id="digit-2" class="digit" value="2">2</button>
+                <button id="digit-3" class="digit" value="3">3</button>
+                <button id="subtract" class="operator">-</button>
+            </div>
+            <div class="row">
+                <button id="digit-0" class="digit" value="0">0</button>
+                <button id="decimal" class="decimal">.</button>
+                <button id="equals">=</button>
+                <button id="add" class="operator">+</button>
             </div>
         </div>
     </div>
