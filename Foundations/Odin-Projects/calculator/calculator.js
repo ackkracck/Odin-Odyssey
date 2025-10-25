@@ -43,6 +43,7 @@ let a = '';
 let operator = '';
 let b = '';
 let calculated;
+let historyContent = '';
 
 const userInput = document.getElementById('input');
 const keypad = document.getElementById('keypad');
@@ -51,28 +52,30 @@ const history = document.getElementById('history');
 keypad.addEventListener('click', (event) => {
 
     let target = event.target;
+    let prevBoxShadow = target.style.boxShadow;
+    target.style.boxShadow = '0px 0px grey';
 
     if (state === 'a' && target.classList.contains('digit')) {
         a += target.value;
         userInput.textContent = a;
-        console.log(a);
     } else if (target.classList.contains('operator')) {
         state = 'operate';
         operator = target.value;
-        console.log(operator);
     } else if (state === 'operate' && target.classList.contains('digit')) {
         b += target.value;
         userInput.textContent = b;
         console.log(b);
     } else if (target.id === 'equals') {
+        history.textContent = a + operator + b;
         calculated = operate(Number(a), operator, Number(b));
-        userInput.textContent = calculated;
         a = calculated;
         b = '';
         operator = '';
         state = 'operate';
     }
 
-    history.textContent = a + operator + b;
+    userInput.textContent = a + operator + b;
+
+    setTimeout(() => { target.style.boxShadow = prevBoxShadow; }, 100);
 
 });
