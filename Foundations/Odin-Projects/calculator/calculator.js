@@ -79,3 +79,18 @@ keypad.addEventListener('click', (event) => {
     setTimeout(() => { target.style.boxShadow = prevBoxShadow; }, 100);
 
 });
+
+const clear = document.getElementById('clear');
+clear.addEventListener('click', (event) => {
+    let prevBoxShadow = event.target.style.boxShadow;
+    event.target.style.boxShadow = '0px 0px';
+    state = 'a';
+    a = '';
+    b = '';
+    operator = '';
+    document.getElementById('history').textContent = '';
+    document.getElementById('input').textContent = '';
+    setTimeout(() => {
+        event.target.style.boxShadow = prevBoxShadow;
+    }, (100));
+});
