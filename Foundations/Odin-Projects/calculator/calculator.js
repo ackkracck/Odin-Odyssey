@@ -39,13 +39,10 @@ function operate(a, operator, b) {
 // display the result
 
 let state = 'a';
-let input = '';
 let a = '';
 let operator = '';
 let b = '';
-let output;
 let calculated;
-let current;
 
 const userInput = document.getElementById('input');
 const keypad = document.getElementById('keypad');
@@ -54,10 +51,10 @@ const history = document.getElementById('history');
 keypad.addEventListener('click', (event) => {
 
     let target = event.target;
-    current = target.value;
 
     if (state === 'a' && target.classList.contains('digit')) {
         a += target.value;
+        userInput.textContent = a;
         console.log(a);
     } else if (target.classList.contains('operator')) {
         state = 'operate';
@@ -65,18 +62,15 @@ keypad.addEventListener('click', (event) => {
         console.log(operator);
     } else if (state === 'operate' && target.classList.contains('digit')) {
         b += target.value;
+        userInput.textContent = b;
         console.log(b);
     } else if (target.id === 'equals') {
         calculated = operate(Number(a), operator, Number(b));
-        console.log(calculated);
+        userInput.textContent = calculated;
         a = calculated;
         b = '';
         operator = '';
         state = 'operate';
-    }
-
-    if (target.classList.contains('digit')) {
-        userInput.textContent = target.value;
     }
 
     history.textContent = a + operator + b;
