@@ -49,11 +49,11 @@ button {
     font-size: 22px;
     font-weight: bold;
     box-shadow: 3px 3px black;
+    cursor: pointer;
 }
 
 #clear-delete {
     height: 50px;
-    margin: 0% 5% 0% 5%;
     display: flex;
     justify-content: flex-end;
     padding: 10px;

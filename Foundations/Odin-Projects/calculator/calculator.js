@@ -1,96 +1,62 @@
-function add(a, b) {
-    return a + b;
-}
+const historyDisplay = document.getElementById('history');
+const inputDisplay = document.getElementById('input');
+const keypad = document.getElementById('keypad');
 
-function subtract(a, b) {
-    return a - b;
-}
+let numA = '0';
+let numB = '';
+let state = null; // 1 for numA, 2 for operator, 3 for numB
+let operator = null;
 
-function multiply(a, b) {
-    return a * b;
-}
+// numA = 0
+// Start in state 1
+// if digit pressed in state 1, append numA
+// if operator pressed while numA === 0, state = 2, operator = selection
+// if operator pressed, keep changing operator to selection
+// if digit pressed in state 2, switch to state 3 and append numB with selections
+// if digit pressed in state 3, append numB
+// if operator pressed in state 3, calculate result, display result 
+// set numA to result, set numB to 0, set operator to null, set state to 2
+// if equals (if numA, operator and numB) pressed state = 4, clear and go to state 1 with new numA
+// if operator pressed in state 4, state = 2, 
 
-function divide(a, b) {
-    return a / b;
-}
-
-
-
-function operate(a, operator, b) {
-    switch (operator) {
-        case '+':
-            return add(a, b);
-        case '-':
-            return subtract(a, b);
-        case '*':
-            return multiply(a, b);
-        case '/':
-            return divide(a, b);
-        default:
-            return 'Error: unknown operator';
+function calculate(a, operator, b) {
+    if (operator === '+') return a + b;
+    if (operator === '-') return a - b;
+    if (operator === '*') return a * b;
+    if (operator === '/') {
+        if (b === 0) {
+            return 'Error';
+        } else {
+            return a / b;
+        }
     }
 }
 
+function clearAll() {
+    numA = '';
+    numB = '';
+    state = null;
+    operator
+    historyDisplay.textContent = '';
+    inputDisplay.textContent = '';
 
-// I want to...
-// get the selected value
-// get the operator
-// get the other value
-// display the result
+    console.log('Cleared');
+    return;
+}
 
-let state = 'a';
-let a = '';
-let operator = '';
-let b = '';
-let calculated;
-let historyContent = '';
-
-const userInput = document.getElementById('input');
-const keypad = document.getElementById('keypad');
-const history = document.getElementById('history');
+function deleteHandler() {
+    //pass
+}
 
 keypad.addEventListener('click', (event) => {
+    key = event.target;
 
-    let target = event.target;
-    let prevBoxShadow = target.style.boxShadow;
-    target.style.boxShadow = '0px 0px grey';
+    console.log('click event triggered', event.target);
 
-    if (state === 'a' && target.classList.contains('digit')) {
-        a += target.value;
-        userInput.textContent = a;
-    } else if (target.classList.contains('operator')) {
-        state = 'operate';
-        operator = target.value;
-    } else if (state === 'operate' && target.classList.contains('digit')) {
-        b += target.value;
-        userInput.textContent = b;
-        console.log(b);
-    } else if (target.id === 'equals') {
-        history.textContent = a + operator + b;
-        calculated = operate(Number(a), operator, Number(b));
-        a = calculated;
-        b = '';
-        operator = '';
-        state = 'operate';
-    }
+    // key click visual
+    let prevShadow = key.style.boxShadow;
+    key.style.boxShadow = '0px 0px';
+    setTimeout(() => { key.style.boxShadow = prevShadow }, 100);
 
-    userInput.textContent = a + operator + b;
-
-    setTimeout(() => { target.style.boxShadow = prevBoxShadow; }, 100);
-
-});
-
-const clear = document.getElementById('clear');
-clear.addEventListener('click', (event) => {
-    let prevBoxShadow = event.target.style.boxShadow;
-    event.target.style.boxShadow = '0px 0px';
-    state = 'a';
-    a = '';
-    b = '';
-    operator = '';
-    document.getElementById('history').textContent = '';
-    document.getElementById('input').textContent = '';
-    setTimeout(() => {
-        event.target.style.boxShadow = prevBoxShadow;
-    }, (100));
+    // Logic
 });
