@@ -59,7 +59,20 @@ What to say again, this project was told me not to be easy by the odin project, 
 
 Even before I started I wanted to see all the created projects, so i looked up other community projects and watched youtube videos such as those by @trshpuppy.
 
-I am so proud of what i've created and truly belive it to be the best of all competitors in this course.
+I am so proud of what i've created and truly believe it to be the best of all competitors in this course.
+
+#### - 27th October 2025 - Odin Project # (still...)
+So glad to announce that I've completed the basic functionality of my calculator... The hardest part was writing clean code, because I realised I had entered if hell
+
+I realise now it isn't THAT easy to program a calculator, but luckily I have a very basic calculator at my work, so I checked out how it functions and tried to simulate that.
+
+I had to start my code over from scratch to break all handling into their own separate functions. I have heard that using classes for the calculator project would be a good idea, but I'm not sure how I should do that just yet. I will come back to refactoring my code into an object in the future, but for now I just want to complete this project first.
+
+I still need to add error handling when dividing by 0, but I do genuinely like that it displays Infinity, I want to keep that to be completely honest.
+
+Also still need to add functionality for decimal handling and the delete button, but it's funny because my simple calculator at work doesn't handle deletes, it just clears - which I personally don't mind.
+
+I've merged my calculator branch for now, but will keep it open and implement the other required features before I close the branch off.
 
 starting now...
 - [Odin Project #4 - Calculator](./Foundations/Odin-Projects/calculator/)
