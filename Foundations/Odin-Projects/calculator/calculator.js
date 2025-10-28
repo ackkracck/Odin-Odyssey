@@ -8,18 +8,6 @@ let state = 1; // 1 for numA, 2 for operator, 3 for numB, 4 for handling equals
 let operator = '';
 let result = '';
 
-// numA = 0
-// Start in state 1
-// if digit pressed in state 1, append numA
-// if operator pressed while state = 2, operator = selection
-// if operator pressed, keep changing operator to selection
-// if digit pressed in state 2, switch to state 3 and append numB with selections
-// if digit pressed in state 3, append numB
-// if operator pressed in state 3, calculate result, display result 
-// set numA to result, set numB to 0, set operator to null, set state to 2
-// if equals (if numA, operator and numB) pressed state = 4, clear and go to state 1 with new numA
-// if operator pressed in state 4, state = 2,
-
 function handleInput(event) {
     if (!event.target.matches('button')) return;
     if (event.target.classList.contains('digit')) {
@@ -36,14 +24,29 @@ function handleInput(event) {
             chainEquals();
         }
         return;
-    } 
+    }
     if (event.target.id === 'period') {
-        //pass
+        handlePeriod(event);
+        return;
     }
     if (event.target.id === 'clear') {
         resetAll();
         return;
     }
+    return;
+}
+
+function handlePeriod(event) {
+    if (state === 1) {
+        if (numA.includes(event.target.value)) return;
+    }
+    if (state === 3) {
+        if (numB.includes(event.target.value)) return;
+    }
+    if (state === 2) {
+        state = 3;
+    }
+    handleDigit(event);
     return;
 }
 
@@ -78,14 +81,17 @@ function handleOperator(event) {
         state = 2;
         operator = event.target.value;
         return;
-    } if (state === 2) {
+    } 
+    if (state === 2) {
         operator = event.target.value;
         return;
-    } if (state === 3) {
+    } 
+    if (state === 3) {
         result = calculate(numA, operator, numB);
         chainInputs(event);
         return;
-    } if (state === 4) {
+    } 
+    if (state === 4) {
         operator = event.target.value;
         state = 2;
     }
@@ -150,12 +156,11 @@ function calculate(a, operator, b) {
 function deleteHandler() {
     //pass
 }
+
 displayIO();
 
 keypad.addEventListener('click', (event) => {
     key = event.target;
-
-    console.log('click event triggered', event.target);
 
     // key click visual
     let prevShadow = key.style.boxShadow;
@@ -163,7 +168,7 @@ keypad.addEventListener('click', (event) => {
     setTimeout(() => { key.style.boxShadow = prevShadow }, 100);
 
     // Logic
-    console.log(`numA: ${numA}, operator: ${operator}, numB: ${numB}`);
     handleInput(event);
     displayIO();
+    console.log(`numA: ${numA}, operator: ${operator}, numB: ${numB}`);
 });
