@@ -50,6 +50,7 @@ button {
     font-weight: bold;
     box-shadow: 3px 3px black;
     cursor: pointer;
+    color: black;
 }
 
 #clear-delete {

@@ -29,6 +29,10 @@ function handleInput(event) {
         handlePeriod(event);
         return;
     }
+    if (event.target.id === 'delete') {
+        handleDelete(event);
+        return;
+    }
     if (event.target.id === 'clear') {
         resetAll();
         return;
@@ -72,6 +76,7 @@ function handleDigit(event) {
         resetAll();
         numA = event.target.value;
         state = 1;
+        return;
     }
     return;
 }
@@ -81,16 +86,16 @@ function handleOperator(event) {
         state = 2;
         operator = event.target.value;
         return;
-    } 
+    }
     if (state === 2) {
         operator = event.target.value;
         return;
-    } 
+    }
     if (state === 3) {
         result = calculate(numA, operator, numB);
         chainInputs(event);
         return;
-    } 
+    }
     if (state === 4) {
         operator = event.target.value;
         state = 2;
@@ -104,6 +109,7 @@ function chainInputs(event) {
     numB = '';
     operator = event.target.value;
     state = 2;
+    return;
 }
 
 function chainEquals() {
@@ -112,6 +118,28 @@ function chainEquals() {
     numB = '';
     operator = '';
     state = 4;
+    return;
+}
+
+function handleDelete() {
+    if (state === 1) {
+        numA = numA.slice(0, -1);
+        return;
+    }
+    if (state === 2) {
+        operator = '';
+        state = 1;
+        return;
+    }
+    if (state === 3) {
+        if (numB === '') {
+            operator = '';
+            state = 1;
+            return;
+        }
+        numB = numB.slice(0, -1);
+    }
+    return;
 }
 
 function resetAll() {
@@ -153,10 +181,6 @@ function calculate(a, operator, b) {
     }
 }
 
-function deleteHandler() {
-    //pass
-}
-
 displayIO();
 
 keypad.addEventListener('click', (event) => {
@@ -170,5 +194,5 @@ keypad.addEventListener('click', (event) => {
     // Logic
     handleInput(event);
     displayIO();
-    console.log(`numA: ${numA}, operator: ${operator}, numB: ${numB}`);
+    console.log(`state: ${state},\nnumA: ${numA},\noperator: ${operator},\nnumB: ${numB}`);
 });
