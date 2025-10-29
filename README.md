@@ -15,6 +15,12 @@ A collection of my progress following The Odin Project curriculum.
 - [Odin Recipes](./Foundations/exercises/HTML-CSS/odin-recipes)
 - [Interneting Is Hard – Flexbox Project](./Foundations/exercises/HTML-CSS/other-projects/interneting-is-hard/flexbox/flexbox.html)
 
+### 🧩 Projects
+- [Odin Project #1 – Landing Page](./Foundations/exercises/HTML-CSS/odin-landing-page)
+- [Odin Project #2 - Rock, Paper, Scissors](./Foundations/Odin-Projects/rock-paper-scissors/)
+- [Odin Project #3 - Etch-A-Sketch](./Foundations/Odin-Projects/etch-a-sketch/)
+- [Odin Project #4 - Calculator](./Foundations/Odin-Projects/calculator/)
+
 **Things I have learnt:**
 - Complete refresher on HTML and CSS fundamentals  
 - Deeper dive into Flexbox (and I now love it despite absolutely hating it just yesterday, when I hadn't even finished half of the page) — the progress seems to be exponential  
@@ -53,6 +59,7 @@ Wish me luck!
 ### 📖 Foundations JavaScript Coursework
 - [Odin Project #2 - Rock, Paper, Scissors](./Foundations/Odin-Projects/rock-paper-scissors/)
 - [Odin Project #3 - Etch-A-Sketch](./Foundations/Odin-Projects/etch-a-sketch/)
+- [Odin Project #4 - Calculator](./Foundations/Odin-Projects/calculator/)
 
 #### - 25th October 2025 - Odin Project #3
 What to say again, this project was told me not to be easy by the odin project, but the minimum viable project truly was easy.
@@ -75,7 +82,25 @@ Also still need to add functionality for decimal handling and the delete button,
 I've merged my calculator branch for now, but will keep it open and implement the other required features before I close the branch off.
 
 starting now...
+
 - [Odin Project #4 - Calculator](./Foundations/Odin-Projects/calculator/)
+
+#### 29th October 2025 - Odin Project #4 COMPLETE!
+Finally completed with this project! 
+
+I tried to keep my code clean and modular but I realised I still have too many tiny functions which can be merged with each other to still handle the same functionality - this taught me that sometimes it's best not to overcomplicate things too much.
+
+I will genuinely start to study the principles of clean code and how to start tacking any problem properly instead of just smashing my fingers onto my keyboard aimlessly.
+
+This also includes learning how to *properly* refactor.
+
+I guess it all comes down to having a plan and method rather than winging it which is what I've been doing up till this point.
+
+Up next... it just doesn't feel right to move onto either the JavaScript or Ruby On Rails path of the Odin Project without having a nice UI to my rock paper scissors project, so I will work on it a little bit and make it look nice and consistent with the rest of my projects. Then, I will create a proper landing page for my Odin Project GitHub page so that it is truly personalized. 
+
+I'm so stoked to continue on this path, I have truly learnt so much from it, and also learnt how to teach myself things properly.
+
+Wish me best of luck!
 
 ---
 
