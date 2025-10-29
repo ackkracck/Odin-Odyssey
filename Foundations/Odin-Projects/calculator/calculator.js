@@ -28,11 +28,11 @@ function handleInput(event) {
     if (!event.target.matches('button')) return;
 
     if (event.target.classList.contains('operator') && event.target.id !== 'equals') {
-        handleOperator(event)
+        handleOperator(event);
         return;
     }
     if (event.target.classList.contains('digit')) {
-        handleDigit(event)
+        handleDigit(event);
         return;
     }
     if (event.target.id === 'equals') {
@@ -115,7 +115,7 @@ function handleDigit(event) {
     if (state === 2) {
         state = 3;
         numB += value;
-        return
+        return;
     }
     if (state === 3) {
         numB += value;
@@ -256,7 +256,7 @@ function resetAll() {
     state = 1;
     operator = '';
     result = '';
-    //resetHistory();
+    //resetHistory(); dont remember why I had this but scared to remove it
     return;
 }
 
@@ -311,12 +311,9 @@ function handleCalculation(event) {
         displayHistory();
         displayIO();
         state = 5;
-        //resetAll();
         return;
     }
-
-    result = checkIfFloat(result) ? Number(result).toFixed(6) : result ;
-
+    result = checkIfFloat(result) ? Number(result).toFixed(6) : result;
     if (event.target.id === 'equals') {
         chainEquals(event);
         return;
@@ -331,20 +328,25 @@ displayIO();
 
 keypad.addEventListener('click', (event) => {
     let key = event.target;
-
-    // key click visual
     let prevShadow = key.style.boxShadow;
     key.style.boxShadow = '0px 0px';
-    setTimeout(() => { key.style.boxShadow = prevShadow }, 100);
-
-    // Logic
+    setTimeout(() => { key.style.boxShadow = prevShadow; }, 100);
     try {
         handleInput(event);
     } catch (e) {
         console.error(e);
-    }
-
+    };
     displayIO();
-
     console.log(`state: ${state},\nnumA: ${numA},\noperator: ${operator},\nnumB: ${numB}`);
+});
+
+window.addEventListener('keydown', (event) => {
+    let key = event.key;
+    if (key === 'Enter') key = '=';
+    let button = `button[value="${key}"]`;
+    if (key === 'Backspace') button = `button[id="delete"]`;
+    key = document.querySelector(button);
+    try {
+        key.click();
+    } catch (e) { /* suppress annoying error message */ };
 });
