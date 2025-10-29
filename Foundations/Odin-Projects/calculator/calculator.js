@@ -4,7 +4,7 @@ const keypad = document.getElementById('keypad');
 
 let numA = '0';
 let numB = '';
-let state = 1; // 1 for numA, 2 for operator, 3 for numB, 4 for handling equals
+let state = 1; // 1 for numA, 2 for operator, 3 for numB, 4 for handling equals, 5 for handling error
 let operator = '';
 let result = '';
 
@@ -38,8 +38,7 @@ function handleInput(event) {
     if (event.target.id === 'equals') {
         numB = appendZeroIfEndDecimal(numB);
         if (numA && operator && numB) {
-            result = calculate(numA, operator, numB);
-            chainEquals();
+            handleCalculation(event);
         }
         return;
     }
@@ -53,6 +52,7 @@ function handleInput(event) {
     }
     if (event.target.id === 'clear') {
         resetAll();
+        resetHistory();
         return;
     }
     return;
@@ -60,7 +60,7 @@ function handleInput(event) {
 
 function handlePeriod(event) {
     if (state === 1) {
-        if (numZero(numA) || numEmpty(numA)) {
+        if (numZero(numA) || numEmpty(numA) || numOnlyPeriod(numA)) {
             numA = '0.';
             return;
         }
@@ -85,6 +85,17 @@ function handlePeriod(event) {
             return;
         }
         if (numB.includes(event.target.value)) return;
+    }
+    if (state === 4) {
+        resetAll();
+        numA = '0.';
+        return;
+    }
+    if (state === 5) {
+        resetAll();
+        resetHistory();
+        numA = '0.';
+        return;
     }
     handleDigit(event);
     return;
@@ -112,9 +123,14 @@ function handleDigit(event) {
     }
     if (state === 4) {
         resetAll();
+        resetHistory();
         numA = value;
         state = 1;
         return;
+    }
+    if (state === 5) {
+        resetAll();
+        resetHistory();
     }
     return;
 }
@@ -151,8 +167,7 @@ function handleOperator(event) {
     if (state === 3) {
         if (numOnlyNegative(numB) || numOnlyPeriod(numB)) return;
         numB = appendZeroIfEndDecimal(numB);
-        result = calculate(numA, operator, numB);
-        chainInputs(event);
+        handleCalculation(event);
         return;
     }
     if (state === 4) {
@@ -160,12 +175,19 @@ function handleOperator(event) {
         state = 2;
         return;
     }
+    if (state === 5) {
+        if (checkNegativePressed(event)) {
+            resetAll();
+            resetHistory();
+            handleNegatives(event);
+        }
+    }
     return;
 }
 
 function checkNegativePressed(event) {
     if (event.target.id === 'subtract') {
-        if ((state === 1 && (numZero(numA) || numEmpty(numA))) || (state === 2 && numEmpty(numB))) {
+        if ((state === 1 && (numZero(numA) || numEmpty(numA))) || (state === 2 && numEmpty(numB)) || state === 5) {
             return true;
         }
     }
@@ -234,12 +256,16 @@ function resetAll() {
     state = 1;
     operator = '';
     result = '';
-    resetHistory();
+    //resetHistory();
     return;
 }
 
 function assembleOutput() {
     return numA + operator + numB;
+}
+
+function isError(result) {
+    return result === 'Error';
 }
 
 function displayHistory() {
@@ -252,6 +278,10 @@ function resetHistory() {
 }
 
 function displayIO() {
+    if (isError(result)) {
+        inputDisplay.textContent = result;
+        return;
+    }
     inputDisplay.textContent = assembleOutput();
     return;
 }
@@ -264,10 +294,29 @@ function calculate(a, operator, b) {
     if (operator === '*') return a * b;
     if (operator === '/') {
         if (b === 0) {
-            return a / b; // 'Error';
+            return 'Error';
         } else {
             return a / b;
         }
+    }
+}
+
+function handleCalculation(event) {
+    result = calculate(numA, operator, numB);
+    if (isError(result)) {
+        displayHistory();
+        displayIO();
+        state = 5;
+        //resetAll();
+        return;
+    }
+    if (event.target.id === 'equals') {
+        chainEquals(event);
+        return;
+    }
+    if (event.target.classList.contains('operator')) {
+        chainInputs(event);
+        return;
     }
 }
 
