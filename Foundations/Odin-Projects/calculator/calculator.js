@@ -301,6 +301,10 @@ function calculate(a, operator, b) {
     }
 }
 
+function checkIfFloat(num) {
+    return String(num).includes('.');
+}
+
 function handleCalculation(event) {
     result = calculate(numA, operator, numB);
     if (isError(result)) {
@@ -310,6 +314,9 @@ function handleCalculation(event) {
         //resetAll();
         return;
     }
+
+    result = checkIfFloat(result) ? Number(result).toFixed(6) : result ;
+
     if (event.target.id === 'equals') {
         chainEquals(event);
         return;

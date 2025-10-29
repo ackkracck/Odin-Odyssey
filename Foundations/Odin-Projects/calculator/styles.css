@@ -37,6 +37,8 @@ body {
     justify-content: flex-end;
     font-size: 42px;
     gap: 5px;
+    overflow: hidden;
+    text-wrap: nowrap;
 }
 
 #screen #history {
