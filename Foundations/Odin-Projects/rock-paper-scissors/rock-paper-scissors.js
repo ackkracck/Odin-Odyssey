@@ -42,12 +42,22 @@ reset.addEventListener('click', () => {
     displayResult("Game reset! Make your choice to start a new game.");
 });
 
-// Buttons config
-buttons.innerHTML = `
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
-`;
+// Create and append buttons to buttons container
+const rockButton = createButton('rock', '✊')
+const paperButton = createButton('paper', '✋');
+const scissorsButton = createButton('scissors', '✌️');
+
+const choiceButtons = [rockButton, paperButton, scissorsButton];
+
+choiceButtons.forEach(btn => buttons.appendChild(btn));
+
+function createButton(id, text) {
+    let btn = document.createElement("button");
+    btn.id = id;
+    btn.innerText = text;
+
+    return btn;
+}
 
 // Gets human choice from button click
 buttons.addEventListener('click', (event) => {
@@ -73,15 +83,19 @@ function getComputerChoice() {
     return choice[index];
 }
 
+function capitalizeFirstCharacter(word) {
+    return word = word.charAt(0).toUpperCase() + word.substring(1, word.length);
+}
+
 // Plays a round
 function playRound() {
     computerChoice = getComputerChoice();
     if (humanChoice === beats[computerChoice]) {
         humanScore++;
-        displayResult(`You win! ${humanChoice} beats ${computerChoice}.`);
+        displayResult(`You win! ${capitalizeFirstCharacter(humanChoice)} beats ${computerChoice}.`);
     } else if (computerChoice === beats[humanChoice]) {
         computerScore++;
-        displayResult(`You lose! ${computerChoice} beats ${humanChoice}.`);
+        displayResult(`You lose! ${capitalizeFirstCharacter(computerChoice)} beats ${humanChoice}.`);
     } else {
         displayResult(`It's a tie! You both chose ${humanChoice}.`);
     }
