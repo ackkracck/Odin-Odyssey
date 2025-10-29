@@ -282,6 +282,10 @@ function displayIO() {
         inputDisplay.textContent = result;
         return;
     }
+    if (String(result).length > 10) {
+        inputDisplay.textContent = String(result).substring(0, 8) + '...';
+        return;
+    }
     inputDisplay.textContent = assembleOutput();
     return;
 }
