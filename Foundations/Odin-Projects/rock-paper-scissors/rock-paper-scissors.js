@@ -38,6 +38,7 @@ reset.addEventListener('click', () => {
     humanScore = 0;
     computerScore = 0;
     buttons.querySelectorAll('button').forEach(btn => btn.disabled = false);
+    reset.textContent = 'Reset';
     displayScore();
     displayResult("Game reset! Make your choice to start a new game.");
 });
@@ -65,6 +66,7 @@ buttons.addEventListener('click', (event) => {
         humanChoice = event.target.id;
         if (humanScore < 5 && computerScore < 5) {
             playRound();
+            return;
         }
         if (humanScore === 5) {
             displayResult("Congratulations! You reached 5 points and won the game!");
@@ -73,6 +75,7 @@ buttons.addEventListener('click', (event) => {
             displayResult("Game over! The computer reached 5 points and won the game!");
             disableButtons();
         }
+        reset.textContent = 'Play again!';
     }
 });
 

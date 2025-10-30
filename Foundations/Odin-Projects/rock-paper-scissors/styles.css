@@ -21,9 +21,9 @@ p {
     align-items: center;
     justify-content: center;
     margin: 20px;
-    border: 3px solid orange;
     border-radius: 15px;
     padding: 20px;
+    background-color: rgba(119, 119, 119, 0.245);
 }
 
 #score {
@@ -55,9 +55,9 @@ p {
 
 #reset {
     font-size: 24px;
-    width: 100px;
-    height: 50px;
+    padding: 10px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
     background-color: orange;
     border: none;
     border-radius: 15px;
