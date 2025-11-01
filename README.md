@@ -109,6 +109,12 @@ Wish me best of luck!
 
 ---
 
+## Full Stack JavaScript
+### Projects
+-[Sign-up Page](./Full-Stack-JavaScript/Odin-Projects/sign-up-form/index.html)
+
+---
+
 ## 🍴 Forks – Odin Odyssey Course
 
 This section is a collection of all the repositories I’ve forked while completing **The Odin Project – Odin Odyssey** curriculum.
