@@ -1,0 +1,13 @@
+:root {
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    margin: 0px;
+}
+
+#main-image img {
+    max-width: 30vw;
+}
