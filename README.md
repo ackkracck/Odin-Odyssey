@@ -112,6 +112,20 @@ Wish me best of luck!
 ## Full Stack JavaScript
 ### Projects
 -[Sign-up Page](./Full-Stack-JavaScript/Odin-Projects/sign-up-form/index.html)
+-[Admin Dashboard](./Full-Stack-JavaScript/Odin-Projects/admin-dashboard/index.html)
+
+#### 4th November 2025 - Odin Project #5 Complete!
+Completed the admin dashboard project, which is the final part of the intermediate HTML and CSS curriculum!
+
+It was a little challenging, and I think I still need to practice thinking of these projects in a better way which will allow me to have a more clear and robust html and css structure which can be scaled in the future if needed.
+
+Of course, right now it doesn't matter in these isolated projects, but when I get into building real projects, I will really need to understand how to tackle problems and set the foundation right so that I don't have messy web pages which are hard to maintain or require any amount of copying and pasting, etc.
+
+This was so fun though and I think the admin dashboard looks amazing.
+
+I chose not to style it to my own taste, and stuck to the original webpage shown by the odin project, because I wanted to practice getting a mock-up and being able to create that to spec. I.e. I wanted to make sure that I can be given any plan and be able to recreate it well with html and css.
+
+Maybe in the future I'll revisit this project, or more likely create a new project to actually display my projects.
 
 ---
 
