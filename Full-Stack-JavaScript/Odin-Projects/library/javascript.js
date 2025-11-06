@@ -6,6 +6,7 @@ const closeModal = document.getElementById('close-modal');
 const submitBook = document.getElementById('submit-book');
 
 // DOM Form Consts
+const addBookForm = document.getElementById('add-book-form');
 const bookTitle = document.getElementById('title');
 const bookAuthor = document.getElementById('author');
 const bookPages = document.getElementById('pages');
@@ -54,5 +55,6 @@ submitBook.addEventListener("click", (event) => {
 
     addBookToLibrary(title, author, pages, released, read);
     updateTable(myLibrary, libraryTable);
+    addBookForm.reset();
     addBookDialog.close();
 });
