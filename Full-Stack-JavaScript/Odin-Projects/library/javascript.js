@@ -1,5 +1,16 @@
 // DOM Consts
 const libraryTable = document.getElementById('library-table');
+const addBookDialog = document.getElementById('add-book-dialog');
+const addBookButton = document.getElementById('add-book-button');
+const closeModal = document.getElementById('close-modal');
+const submitBook = document.getElementById('submit-book');
+
+// DOM Form Consts
+const bookTitle = document.getElementById('title');
+const bookAuthor = document.getElementById('author');
+const bookPages = document.getElementById('pages');
+const bookReleased = document.getElementById('released');
+const bookRead = document.getElementById('read');
 
 // JS Table and functions
 const myLibrary = [];
@@ -19,6 +30,7 @@ function addBookToLibrary(title, author, pages, released, read) {
 }
 
 function updateTable(library, table) {
+
     library.forEach((book) => {
         let newRow = table.insertRow();
         for (let prop in book) {
@@ -28,6 +40,19 @@ function updateTable(library, table) {
     });
 }
 
-addBookToLibrary('Naruto', 'Masashi Kishimoto', 192, 2000, 'not read');
+addBookButton.addEventListener("click", () => {
+    addBookDialog.showModal();
+});
 
-updateTable(myLibrary, libraryTable);
+submitBook.addEventListener("click", (event) => {
+
+    let title = bookTitle.value;
+    let author = bookAuthor.value;
+    let pages = bookPages.value;
+    let released = bookReleased.value;
+    let read = bookRead.value;
+
+    addBookToLibrary(title, author, pages, released, read);
+    updateTable(myLibrary, libraryTable);
+    addBookDialog.close();
+});

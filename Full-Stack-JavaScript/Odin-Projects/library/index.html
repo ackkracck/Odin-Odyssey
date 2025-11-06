@@ -8,6 +8,27 @@
     <script src="./javascript.js" defer></script>
 </head>
 <body>
+    <dialog id="add-book-dialog" closedby="any">
+        <form>
+            <label for="title">Title</label>
+            <input id="title" type="text">
+
+            <label for="author">Author</label>
+            <input id="author" type="text">
+
+            <label for="pages">Pages</label>
+            <input id="pages" type="number">
+
+            <label for="released">Released</label>
+            <input id="released" type="number">
+
+            <label for="read">Read</label>
+            <input id="read" type="text">
+
+            <button id="submit-book" type="button">Add Book</button>
+        </form>
+    </dialog>
+    <button id="add-book-button">Add Book</button>
     <table id="library-table">
         <tr>
             <th>Title</th>
