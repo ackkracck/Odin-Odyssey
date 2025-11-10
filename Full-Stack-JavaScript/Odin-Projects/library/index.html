@@ -11,19 +11,19 @@
     <dialog id="add-book-dialog" closedby="any">
         <form id="add-book-form">
             <label for="title">Title</label>
-            <input id="title" type="text">
+            <input id="title" type="text" required>
 
             <label for="author">Author</label>
-            <input id="author" type="text">
+            <input id="author" type="text" required>
 
             <label for="pages">Pages</label>
-            <input id="pages" type="number">
+            <input id="pages" type="number" required>
 
             <label for="released">Released</label>
-            <input id="released" type="number">
+            <input id="released" type="number" required>
 
             <label for="read">Read</label>
-            <input id="read" type="text">
+            <input id="read" type="text" required>
 
             <button id="submit-book" type="button">Add Book</button>
             <button id="submit-book" type="reset">Clear</button>
@@ -36,7 +36,8 @@
             <th>Author</th>
             <th>Pages</th>
             <th>Released</th>
-            <th>Read</th>
+            <th>Status</th>
+            <th>Utils</th>
         </tr>
     </table>
 </body>

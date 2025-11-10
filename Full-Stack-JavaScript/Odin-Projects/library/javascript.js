@@ -17,7 +17,7 @@ const bookRead = document.getElementById('read');
 const myLibrary = [];
 
 function Book(title, author, pages, released, read) {
-    if(!new.target) throw Error("Must use 'new' keyword to create object;");
+    if (!new.target) throw Error("Must use 'new' keyword to create object;");
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -31,21 +31,35 @@ function addBookToLibrary(title, author, pages, released, read) {
 }
 
 function updateTable(library, table) {
+    let book = library[library.length - 1];
+    let newRow = table.insertRow();
+    for (let prop in book) {
+        let newCell = newRow.insertCell();
+        newCell.textContent = book[prop];
+    }
 
-    library.forEach((book) => {
-        let newRow = table.insertRow();
-        for (let prop in book) {
-            let newCell = newRow.insertCell();
-            newCell.textContent = book[prop];
-        }
+    // Delete button cell
+    let deleteButtonCell = newRow.insertCell();
+    deleteButtonCell.appendChild(deleteRowButton(newRow));
+}
+
+function deleteRowButton(row) {
+    let deleteButton = document.createElement('button');
+    deleteButton.innerText = '🗑️';
+    deleteButton.style.borderRadius = '50%';
+    deleteButton.style.backgroundColor = 'red';
+
+    deleteButton.addEventListener('click', () => {
+        row.remove();
     });
+    return deleteButton;
 }
 
 addBookButton.addEventListener("click", () => {
     addBookDialog.showModal();
 });
 
-submitBook.addEventListener("click", (event) => {
+submitBook.addEventListener("click", () => {
 
     let title = bookTitle.value;
     let author = bookAuthor.value;
@@ -53,8 +67,12 @@ submitBook.addEventListener("click", (event) => {
     let released = bookReleased.value;
     let read = bookRead.value;
 
-    addBookToLibrary(title, author, pages, released, read);
-    updateTable(myLibrary, libraryTable);
-    addBookForm.reset();
-    addBookDialog.close();
+    if (addBookForm.checkValidity()) {
+        addBookToLibrary(title, author, pages, released, read);
+        updateTable(myLibrary, libraryTable);
+        addBookForm.reset();
+        addBookDialog.close();
+    } else {
+        addBookForm.reportValidity();
+    }
 });
